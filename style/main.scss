@@ -1,0 +1,31 @@
+
+@import "fonts";
+$primary:#d5c455;
+$black:#222222;
+
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: Bold;
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face{
+    font-family: Medium;
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+@font-face{
+    font-family: Regular;
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+
