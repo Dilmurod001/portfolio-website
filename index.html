@@ -7,16 +7,45 @@
     <title>Dilmurod</title>
 
     <link rel="stylesheet" href="./style/main.css">
+    
+    <script defer src="./scripts/slowNumber.js"></script>
+    <script defer src="./scripts/scills.js"></script>
+    <script defer src="./scripts/landing.js"></script>
+    <script defer src="./scripts/about-me.js"></script>
 </head>
-<body>
-    <div class="landing-page">
-        <div class="header">
+    <!-- landing-page start -->
+
+    <div class="landing-page" id="home">
+        <div class="header" id="header">
             <div class="logo">Dima</div>
-            <div class="burger-icon" id="bricon" onclick="navbar()">
-                <span id="about"></span>
+            <div class="burger-icon" id="burger-icon" onclick="showMenu()">
+                <span></span>
                 <span></span>
                 <span></span>
             </div>
+
+            <div class="menu" id="menu">
+                <ul>
+                    <a href="#home" onclick="showMenu()">
+                        <li>Home</li>
+                    </a>
+                    <a href="#about-me" onclick="showMenu()">
+                        <li>About Me</li>
+                    </a>
+                    <a href="#skills" onclick="showMenu()">
+                        <li>Skills</li>
+                    </a>
+                    <a href="#portfolio" onclick="showMenu()">
+                        <li>Portfolio</li>
+                    </a>
+                    <a href="#contact" onclick="showMenu()">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        
+
+
         </div>
 
         <div class="left" >
@@ -27,8 +56,8 @@
                 I'm Dilmurod Jadanov
             </div>
             <div class="buttons">
-                <button>MORE ABOUT ME</button>
-                <button>HIRE ME</button>
+               <a href="#about-me"> <button>MORE ABOUT ME</button> </a>
+               <a href="#"> <button>HIRE ME</button> </a>
             </div>
         </div>
 
@@ -37,7 +66,104 @@
         </div>
     </div>
 
+    <!-- landing-page End -->
 
-    <script src="./script/script.js"></script>
+        <!-- About-Me Start -->
+
+    <div class="about-me" id="about-me">
+        <div class="section-title">About Me</div>
+
+        <div class="content-wrapper">
+            <div class="left" id="about-me-statistics"></div>
+            <div class="right">
+                <div class="small-text">About me</div>
+                <div class="position">
+                    Java Spring and React Js Developer based in Tashkent
+                </div>
+                <div class="summary">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                    the blind texts.
+                </div>
+                <div class="personal-information-wrapper" id="personal-information">
+                </div>
+                    <a href="/CV.pdf" class="cv-download" download>Download CV</a>
+            </div>
+        </div>
+        <!-- About-Me End -->
+
+         <!-- Skills Start -->
+    <div class="skills" id="skills">
+        <div class="section-title">Skills</div>
+        <div class="skills-wrapper" id="skills-wrapper"></div>
+    </div>
+    <!-- Skills End -->
+
+    <!-- Portfolio Start -->
+    <div class="projects" id="portfolio">
+        <div class="section-title">Portfolio</div>
+        <div class="projects-wrapper">
+            <div class="project">
+                <div class="overlay">
+                    <div class="name">Facebook Clone</div>
+                    <div class="links">
+                        <a href="https://github.com/yakohere/facebook-clone" target="__blank">
+                            <img class="one" src="./images/github.png" />
+                        </a>
+
+                        <a href="https://g11-facebook-clone.netlify.app/" target="__blank">
+                            <img src="./images/web.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="overlay">
+                    <div class="name">Facebook Clone</div>
+                    <div class="links">
+                        <a href="https://github.com/yakohere/facebook-clone" target="__blank">
+                            <img class="one" src="./images/github.png" />
+                        </a>
+
+                        <a href="https://g11-facebook-clone.netlify.app/" target="__blank">
+                            <img src="./images/web.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project" >
+                <div class="overlay">
+                    <div class="name">Facebook Clone</div>
+                    <div class="links">
+                        <a href="https://github.com/yakohere/facebook-clone" target="__blank">
+                            <img class="one" src="./images/github.png" />
+                        </a>
+
+                        <a href="https://g11-facebook-clone.netlify.app/" target="__blank">
+                            <img src="./images/web.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio End -->
+
+    <!-- Contact Start -->
+    <div class="contact" id="contact">
+        <div class="section-title">Follow Me Around</div>
+        <div class="social-icons">
+            <a href="https://t.me/Jadanov_D_01"><img src="./images/telegram.png" /></a>
+            <a href="#"><img src="./images/instagram.png" /></a>
+            <a href="#"><img src="./images/global.png" /></a>
+            <a href="#"><img src="./images/png-transparent-social-media-whatsapp-computer-icons-android-unified-payments-interface-button-text-trademark-logo.png" /></a>
+            <a href="#"><img src="./images/Без названия (1).png" /></a>
+            <a href="#"><img src=""></a>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
 </body>
 </html>

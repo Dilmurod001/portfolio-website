@@ -1,9 +1,12 @@
 
-@import "fonts";
+
 // $primary:#d5c455;
 $primary:rgba(238, 146, 40, 0.795);
 $black:#222222;
-
+$shadow: 8px 25px 28px -9px rgba(0, 0, 0, 0.09);
+$section_padding_laptop: 40px 80px;
+$section_padding_tablet: 20px 40px;
+$section_padding_phone: 10px 20px;
 
 @mixin flexCenter($direction) {
     display: flex;
@@ -12,130 +15,70 @@ $black:#222222;
     flex-direction: $direction;
 }
 
+$section_padding_laptop: 40px 80px;
+$section_padding_tablet: 20px 40px;
+$section_padding_phone: 10px 20px;
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin sectionWrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: $section_padding_laptop;
+        
+    @include flexCenter(column);
+
+    @media(max-width: 800px) {
+        padding: $section_padding_tablet;
+    }
+    
+    @media(max-width: 500px) {
+        padding: $section_padding_phone;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        background: white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $primary;
+    }
+}
+
+.section-title {
+    font-family: Bold;
+    font-size: 40px;
+    text-align: center;
+    margin: 40px;
+    
+    @media(max-width: 600px) {
+        margin: 30px;
+        font-size: 30px;
+    }
+}
+
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+@import "fonts";
+@import "landing-page";
+@import "about-me";
+@import "scils";
+@import "projects";
+@import "contact";
 
-.landing-page{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 
-    .header {
-        width: 100%;
-        position: absolute;
-        padding: 20px 100px;
-        display: flex;
-        justify-content: space-between;
-
-        .logo {
-            font-family: Bold;
-            color: $black;
-            // @media(max-width: 520px){
-            //     color: whitesmoke;
-            // }
-        }
-        
-        .burger-icon {
-            @include flexCenter(column);
-            gap: 3px;
-            cursor: pointer;
-    
-            span {
-                width: 20px;
-                height: 1.3px;
-                background: $black;
-
-                // @media(max-width: 520px){
-                //     background: whitesmoke;
-                // }
-            }
-
-        }
-        @media(max-width: 1230px) {
-            padding: 20px 70px; 
-        }
-        @media(max-width: 1230px) {
-            padding: 20px 70px; 
-        }
-    }
-    @media(max-width: 730px) {
-        grid-template-columns: 1fr;            
-    }
-    .left {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding-left: 100px;
-
-        @media(max-width: 730px) {
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;            
-        }
-
-        .position {
-            font-family: Bold;
-            color: $primary;
-        }        
-
-        .name {
-            font-family: Bold;
-            font-size: 80px;
-            line-height: 1.2;
-            color: $black;
-            margin-bottom: 24px;
-
-            @media(max-width: 1000px) {
-                font-size: 50px;            
-            }
-
-            @media(max-width: 730px) {
-                color: #fff;            
-            }
-        }
-
-        .buttons {
-            button {
-                padding: 16px 24px;
-                background: $primary;
-                color: #fff;
-                font-family: Medium;
-                border: none;
-                box-shadow: 0 24px 36px -11px rgba(0, 0, 0, 0.2);
-                cursor: pointer;
-            
-                &:last-child {
-                    background: #fff;
-                    color: $black
-                }
-            }
-        }
-        @media(max-width: 1230px) {
-            padding-left: 70px;    
-        }
-
-        @media(max-width: 1080px) {
-            padding-left: 50px;    
-        }
-        
-    }
-    
-.right{
-    background-color: $primary;
-    img {
-        height: 100%;
-        display: block;
-        margin: auto;
-        border:none;
-        
-       
-    }
-}
-}
 
